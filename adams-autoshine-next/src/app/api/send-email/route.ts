@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const data = bookingFormSchema.parse(body);
 
     const { error } = await resend.emails.send({
-      from: "Adams Autoshine <onboarding@resend.dev>",
+      from: "Adams Autoshine <bookings@adamsautoshine.com>",
       to: ["info@adamsautoshine.com"],
       subject: `New Booking Request from ${data.fullName}`,
       html: `
