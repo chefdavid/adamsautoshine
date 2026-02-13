@@ -50,25 +50,9 @@ ${bookingData.message || 'No additional message provided'}
 Please contact the customer to confirm the appointment.
     `.trim();
 
-    // Get email configuration from environment
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    const BUSINESS_EMAIL = Deno.env.get("BUSINESS_EMAIL") || "contact@adamsautoshine.com";
-
-    if (!RESEND_API_KEY) {
-      console.error("RESEND_API_KEY not configured");
-      return new Response(
-        JSON.stringify({
-          error: "Email service not configured. Please contact support."
-        }),
-        {
-          status: 500,
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-    }
+    // Email configuration
+    const RESEND_API_KEY = "re_FKKGrQ2f_5H5pPQFxt5QB9RnS6uz1A6Ab";
+    const BUSINESS_EMAIL = "form@adamsautoshine.com";
 
     // Send email using Resend API
     const resendResponse = await fetch("https://api.resend.com/emails", {
