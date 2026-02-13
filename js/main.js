@@ -240,18 +240,51 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isValid) {
-        // Show success message
-        bookingForm.style.display = 'none';
-        formSuccess.style.display = 'block';
+        // Get form data
+        const bookingData = {
+          name: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          service: document.getElementById('service').value,
+          vehicleType: document.getElementById('vehicleType').value,
+          date: document.getElementById('date').value,
+          time: document.getElementById('time').value,
+          message: document.getElementById('message').value
+        };
 
-        // In production, submit to your form handler here:
-        // fetch(bookingForm.action, {
-        //   method: 'POST',
-        //   body: new FormData(bookingForm)
-        // });
+        // Get submit button
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
 
-        // Scroll to success message
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Send to edge function
+        const apiUrl = `https://ooxixdtwsehcspmkztoy.supabase.co/functions/v1/send-booking-email`;
+
+        fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(bookingData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success || data.message) {
+            // Show success message
+            bookingForm.style.display = 'none';
+            formSuccess.style.display = 'block';
+            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error(data.error || 'Failed to send booking');
+          }
+        })
+        .catch(error => {
+          console.error('Booking error:', error);
+          alert('Sorry, there was an error sending your booking. Please call us directly at (555) 123-4567.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        });
       } else {
         // Scroll to first error
         const firstError = bookingForm.querySelector('.form-group.error');
