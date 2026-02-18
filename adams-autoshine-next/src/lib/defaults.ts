@@ -44,9 +44,9 @@ const HERO_DEFAULTS: HeroData = {
 
 const ABOUT_DEFAULTS: AboutData = {
   heading: "About",
-  headingAccent: "Adams Autoshine",
+  headingAccent: "Adam's Autoshine",
   paragraph1:
-    "At Adams Autoshine, we believe every vehicle deserves to look its absolute best. Founded right here in Enid, Oklahoma, we've built our reputation on meticulous attention to detail, honest pricing, and treating every car like it's our own.",
+    "At Adam's Autoshine, we believe every vehicle deserves to look its absolute best. Founded right here in Enid, Oklahoma, we've built our reputation on meticulous attention to detail, honest pricing, and treating every car like it's our own.",
   paragraph2:
     "What started as a passion for cars has grown into Enid's most trusted auto detailing service. We combine professional-grade products with years of hands-on experience to deliver results that exceed expectations every single time.",
   valueBadges: [
@@ -66,12 +66,12 @@ const CTA_DEFAULTS: CTABannerData = {
 
 const SEO_DEFAULTS: SEOData = {
   title:
-    "Adams Autoshine | Professional Car Detailing & Auto Wash in Enid, OK",
+    "Adam's Autoshine | Professional Car Detailing & Auto Wash in Enid, OK",
   description:
-    "Adams Autoshine is Enid, Oklahoma's premier car detailing service. Professional exterior & interior detailing, ceramic coating, paint correction, and hand car wash. Book online today!",
+    "Adam's Autoshine is Enid, Oklahoma's premier car detailing service. Professional exterior & interior detailing, ceramic coating, paint correction, and hand car wash. Book online today!",
   keywords:
     "car detailing enid ok, auto detailing enid oklahoma, car wash enid, ceramic coating enid, paint correction enid ok, mobile detailing enid, interior car cleaning enid, hand car wash enid, vehicle detailing enid oklahoma, best car detailing enid, professional auto wash enid ok, car wax enid, auto cleaning services enid",
-  ogTitle: "Adams Autoshine | Professional Car Detailing in Enid, OK",
+  ogTitle: "Adam's Autoshine | Professional Car Detailing in Enid, OK",
   ogDescription:
     "Enid, Oklahoma's premier car detailing service. Professional detailing, ceramic coating, paint correction & more. Book your appointment today!",
   ogImage: "https://www.adamsautoshine.com/images/og-image.jpg",

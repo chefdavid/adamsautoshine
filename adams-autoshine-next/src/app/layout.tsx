@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
-    authors: [{ name: "Adams Autoshine" }],
+    authors: [{ name: "Adam's Autoshine" }],
     robots: "index, follow",
     alternates: {
       canonical: "https://www.adamsautoshine.com/",
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: seo.ogDescription,
       images: [{ url: seo.ogImage }],
       locale: "en_US",
-      siteName: "Adams Autoshine",
+      siteName: "Adam's Autoshine",
     },
     twitter: {
       card: "summary_large_image",
@@ -65,7 +65,7 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              name: "Adams Autoshine",
+              name: "Adam's Autoshine",
               description:
                 "Professional car detailing, ceramic coating, paint correction, and auto wash services in Enid, Oklahoma.",
               url: "https://www.adamsautoshine.com",

@@ -4,7 +4,6 @@ import { ImageIcon } from "lucide-react";
 import { SectionHeader } from "@/components/custom/SectionHeader";
 import { ScrollReveal } from "@/components/custom/ScrollReveal";
 import { getIcon } from "@/lib/icon-map";
-import { cn } from "@/lib/utils";
 import type { GalleryItemData } from "@/lib/admin-types";
 
 interface GalleryProps {
@@ -20,7 +19,7 @@ export function Gallery({ data }: GalleryProps) {
           tag="See The Results"
           title="Our Recent"
           titleAccent="Work"
-          subtitle="Real results on real vehicles. See why Enid car owners trust Adams Autoshine for their detailing needs."
+          subtitle="Real results on real vehicles. See why Enid car owners trust Adam's Autoshine for their detailing needs."
         />
 
         <ScrollReveal>
@@ -30,10 +29,7 @@ export function Gallery({ data }: GalleryProps) {
               return (
                 <div
                   key={item.tag}
-                  className={cn(
-                    "group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer",
-                    item.wide && "lg:col-span-2 max-lg:col-span-1"
-                  )}
+                  className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
                 >
                   <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-bg-card to-bg-card-hover border border-border-subtle rounded-xl transition-colors duration-300 group-hover:border-border-accent">
                     <ItemIcon className="h-10 w-10 text-amber opacity-50" />

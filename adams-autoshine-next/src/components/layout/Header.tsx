@@ -39,7 +39,7 @@ export function Header({ phone, phoneHref }: HeaderProps) {
       <nav className="max-w-[1200px] mx-auto px-5 flex items-center justify-between">
         <Link href="#" className="flex items-center gap-2.5 text-text-white text-[1.3rem] font-bold z-[1001] hover:text-text-white">
           <span>
-            Adams<span className="text-amber">Autoshine</span>
+            Adam&apos;s<span className="text-amber">Autoshine</span>
           </span>
         </Link>
 

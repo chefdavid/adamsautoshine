@@ -59,7 +59,7 @@ export function Footer({ contactData, footerData }: FooterProps) {
               href="#"
               className="text-text-white text-[1.3rem] font-bold hover:text-text-white"
             >
-              Adams<span className="text-amber">Autoshine</span>
+              Adam&apos;s<span className="text-amber">Autoshine</span>
             </Link>
             <p className="text-[0.9rem] text-text-muted mt-4 leading-relaxed">
               {brandTagline}
@@ -155,7 +155,7 @@ export function Footer({ contactData, footerData }: FooterProps) {
         {/* Copyright */}
         <div className="py-5 text-center">
           <p className="text-[0.85rem] text-text-muted">
-            &copy; {new Date().getFullYear()} Adams Autoshine. All Rights
+            &copy; {new Date().getFullYear()} Adam&apos;s Autoshine. All Rights
             Reserved. | Enid, Oklahoma
           </p>
         </div>

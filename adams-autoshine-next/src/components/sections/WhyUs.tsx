@@ -19,9 +19,9 @@ export function WhyUs({ reasons, stats }: WhyUsProps) {
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={Trophy}
-          tag="Why Adams Autoshine"
+          tag="Why Adam's Autoshine"
           title="Why Enid Trusts"
-          titleAccent="Adams Autoshine"
+          titleAccent="Adam's Autoshine"
           subtitle="We're not just another car wash. We're passionate detailing professionals committed to excellence on every vehicle we touch."
         />
 

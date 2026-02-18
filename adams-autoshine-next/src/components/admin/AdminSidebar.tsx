@@ -86,7 +86,7 @@ export function AdminSidebar({ open, onClose }: AdminSidebarProps) {
             href="/admin/dashboard"
             className="text-lg font-bold text-slate-900"
           >
-            Adams<span className="text-amber-500">Autoshine</span>
+            Adam&apos;s<span className="text-amber-500">Autoshine</span>
           </Link>
           <button
             onClick={onClose}

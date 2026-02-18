@@ -18,7 +18,7 @@ export function About({ data }: AboutProps) {
             <div className="w-full aspect-[4/3] flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-bg-card to-bg-card-hover border border-border-subtle rounded-3xl">
               <SprayCan className="h-16 w-16 text-amber opacity-30" />
               <span className="text-text-muted font-medium">
-                Adams Autoshine
+                Adam&apos;s Autoshine
               </span>
             </div>
           </ScrollReveal>

@@ -192,11 +192,11 @@ export const PRICING_TIERS: PricingTier[] = [
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { icon: Car, label: "Exterior Detail", tag: "Full Exterior Detail", wide: true },
+  { icon: Car, label: "Exterior Detail", tag: "Full Exterior Detail" },
   { icon: Sofa, label: "Interior Clean", tag: "Interior Deep Clean" },
   { icon: Shield, label: "Ceramic Coating", tag: "Ceramic Coating" },
   { icon: Paintbrush, label: "Paint Correction", tag: "Paint Correction" },
-  { icon: Gem, label: "Showroom Finish", tag: "Ultimate Package Result", wide: true },
+  { icon: Gem, label: "Showroom Finish", tag: "Ultimate Package Result" },
 ];
 
 export const BOOKING_PERKS: Perk[] = [
@@ -230,7 +230,7 @@ export const TESTIMONIALS: Testimonial[] = [
     location: "Enid, OK \u2022 Ultimate Package",
   },
   {
-    text: "I've tried every car wash in Enid and nothing compares to Adams Autoshine. The ceramic coating they applied has kept my car looking new for months even through Oklahoma weather.",
+    text: "I've tried every car wash in Enid and nothing compares to Adam's Autoshine. The ceramic coating they applied has kept my car looking new for months even through Oklahoma weather.",
     initials: "SR",
     name: "Sarah R.",
     location: "North Enid, OK \u2022 Ceramic Coating",
@@ -247,12 +247,12 @@ export const FAQS: FAQ[] = [
   {
     question: "How long does a full car detail take in Enid, OK?",
     answer:
-      "A full car detail at Adams Autoshine typically takes 2-4 hours depending on the vehicle size and package selected. Our Basic Shine takes about 1 hour, Premium Detail takes 2-3 hours, and our Ultimate Package takes 3-4 hours. We never rush the job - quality takes time.",
+      "A full car detail at Adam's Autoshine typically takes 2-4 hours depending on the vehicle size and package selected. Our Basic Shine takes about 1 hour, Premium Detail takes 2-3 hours, and our Ultimate Package takes 3-4 hours. We never rush the job - quality takes time.",
   },
   {
     question: "Do you offer mobile car detailing in Enid, Oklahoma?",
     answer:
-      "Yes! Adams Autoshine offers mobile detailing services throughout Enid and surrounding areas in Garfield County, including North Enid, Waukomis, and Drummond. We bring our professional equipment directly to your home or office - all we need is access to a water source and a shaded area when possible.",
+      "Yes! Adam's Autoshine offers mobile detailing services throughout Enid and surrounding areas in Garfield County, including North Enid, Waukomis, and Drummond. We bring our professional equipment directly to your home or office - all we need is access to a water source and a shaded area when possible.",
   },
   {
     question: "What is ceramic coating and is it worth it?",
@@ -267,7 +267,7 @@ export const FAQS: FAQ[] = [
   {
     question: "What areas do you serve besides Enid?",
     answer:
-      "Adams Autoshine proudly serves Enid and surrounding communities including North Enid, Waukomis, Drummond, Kremlin, Lahoma, Carrier, Covington, and other areas within Garfield County, Oklahoma. For mobile detailing outside our standard service area, please contact us and we'll do our best to accommodate you.",
+      "Adam's Autoshine proudly serves Enid and surrounding communities including North Enid, Waukomis, Drummond, Kremlin, Lahoma, Carrier, Covington, and other areas within Garfield County, Oklahoma. For mobile detailing outside our standard service area, please contact us and we'll do our best to accommodate you.",
   },
   {
     question: "What payment methods do you accept?",
@@ -323,4 +323,4 @@ export const CONTACT_INFO = {
 };
 
 export const FOOTER_SEO_TEXT =
-  "Adams Autoshine provides professional car detailing services in Enid, Oklahoma and surrounding areas including North Enid, Waukomis, Drummond, Kremlin, and Garfield County. Our services include exterior car wash, interior detailing, ceramic coating, paint correction, engine bay cleaning, and headlight restoration. We are Enid's top-rated auto detailing provider.";
+  "Adam's Autoshine provides professional car detailing services in Enid, Oklahoma and surrounding areas including North Enid, Waukomis, Drummond, Kremlin, and Garfield County. Our services include exterior car wash, interior detailing, ceramic coating, paint correction, engine bay cleaning, and headlight restoration. We are Enid's top-rated auto detailing provider.";

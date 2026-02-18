@@ -22,7 +22,7 @@ export default function FooterPage() {
               {/* Brand section */}
               <div className="max-w-md">
                 <div className="text-text-white text-[1.3rem] font-bold mb-2">
-                  Adams<span className="text-amber-400">AutoShine</span>
+                  Adam&apos;s<span className="text-amber-400">AutoShine</span>
                 </div>
                 <InlineTextArea
                   value={footer.brandTagline}
@@ -46,7 +46,7 @@ export default function FooterPage() {
               {/* Copyright preview */}
               <div className="pt-5 border-t border-border-subtle text-center">
                 <p className="text-[0.85rem] text-text-muted">
-                  &copy; {new Date().getFullYear()} Adams AutoShine. All rights reserved.
+                  &copy; {new Date().getFullYear()} Adam&apos;s AutoShine. All rights reserved.
                 </p>
               </div>
             </div>

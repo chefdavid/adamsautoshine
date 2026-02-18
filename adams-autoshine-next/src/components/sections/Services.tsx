@@ -20,7 +20,7 @@ export function Services({ data }: ServicesProps) {
           tag="What We Offer"
           title="Our Car Detailing"
           titleAccent="Services"
-          subtitle="Comprehensive auto detailing packages tailored to your vehicle's needs. From a quick exterior wash to a complete paint correction, Adams Autoshine has you covered."
+          subtitle="Comprehensive auto detailing packages tailored to your vehicle's needs. From a quick exterior wash to a complete paint correction, Adam's Autoshine has you covered."
         />
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

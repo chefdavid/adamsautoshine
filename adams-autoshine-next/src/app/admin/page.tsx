@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
             </div>
             <h1 className="text-2xl font-bold text-slate-900">Admin Panel</h1>
             <p className="text-sm text-slate-500 mt-1">
-              Adams Autoshine Content Manager
+              Adam&apos;s Autoshine Content Manager
             </p>
           </div>
 
