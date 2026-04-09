@@ -131,10 +131,10 @@ export function Footer({ contactData, footerData }: FooterProps) {
               <li className="flex items-start gap-2.5 text-[0.85rem] text-text-muted">
                 <Mail className="h-4 w-4 text-amber mt-0.5 shrink-0" />
                 <a
-                  href={contact.emailHref}
+                  href="#booking"
                   className="text-text-muted hover:text-amber transition-colors"
                 >
-                  {contact.email}
+                  Book Online
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-[0.85rem] text-text-muted">

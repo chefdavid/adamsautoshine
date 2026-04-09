@@ -65,13 +65,13 @@ export function Contact({ data }: ContactProps) {
                 </div>
                 <div>
                   <strong className="block text-text-white text-[0.9rem] font-semibold mb-1">
-                    Email
+                    Contact
                   </strong>
                   <a
-                    href={data.emailHref}
+                    href="#booking"
                     className="text-[0.9rem] text-text-muted hover:text-amber transition-colors"
                   >
-                    {data.email}
+                    Book Online or Send a Message
                   </a>
                 </div>
               </div>

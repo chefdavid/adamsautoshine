@@ -70,7 +70,6 @@ export default async function RootLayout({
                 "Professional car detailing, ceramic coating, paint correction, and auto wash services in Gloucester County, New Jersey.",
               url: "https://www.adamsautoshine.com",
               telephone: contact.phone,
-              email: contact.email,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: contact.address,

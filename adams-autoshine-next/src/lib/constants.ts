@@ -305,8 +305,8 @@ export const CONTACT_INFO = {
   city: "Mullica Hill, NJ 08062",
   phone: "(856) 305-0623",
   phoneHref: "tel:+18563050623",
-  email: "info@adamsautoshine.com",
-  emailHref: "mailto:info@adamsautoshine.com",
+  email: "Book Online",
+  emailHref: "#booking",
   hours: {
     weekday: "Mon - Fri: 8:00 AM - 6:00 PM",
     saturday: "Saturday: 9:00 AM - 4:00 PM",
