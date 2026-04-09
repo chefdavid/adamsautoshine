@@ -17,7 +17,7 @@ interface FAQProps {
 
 export function FAQ({ data }: FAQProps) {
   return (
-    <section id="faq" className="py-25 bg-bg-section">
+    <section id="faq" className="py-25 bg-[#F0F4F8]">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={CircleHelp}

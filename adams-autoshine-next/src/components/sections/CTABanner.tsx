@@ -16,7 +16,7 @@ export function CTABanner({ data, phoneHref }: CTABannerProps) {
       className="py-20 border-t border-b border-border-accent"
       style={{
         background:
-          "linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(10, 10, 26, 0.95) 100%), #0A0A1A",
+          "linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(12, 18, 34, 0.95) 100%), #0C1222",
       }}
     >
       <div className="max-w-[1200px] mx-auto px-5">
@@ -30,7 +30,7 @@ export function CTABanner({ data, phoneHref }: CTABannerProps) {
           <div className="flex gap-4 justify-center flex-wrap max-md:flex-col max-md:items-center">
             <Link
               href="#booking"
-              className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] btn-gradient text-bg-dark border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow max-md:w-full max-md:max-w-[300px]"
+              className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] btn-gradient text-white border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow max-md:w-full max-md:max-w-[300px]"
             >
               <CalendarCheck className="h-5 w-5" />
               {data.ctaText}

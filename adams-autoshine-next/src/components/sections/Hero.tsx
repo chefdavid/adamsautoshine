@@ -14,28 +14,52 @@ export function Hero({ data }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-pattern"
-      style={{
-        background:
-          "radial-gradient(ellipse at 20% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%), linear-gradient(180deg, #0A0A1A 0%, #0c0c22 50%, #0E0E20 100%)",
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#E8EEF4]"
     >
-      {/* Hero bg overlay */}
-      <div
-        className="absolute inset-0 opacity-35"
-        style={{
-          backgroundImage: "url('/images/hero-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+      {/* Watermark text behind everything */}
+      <div className="absolute inset-0 flex items-center justify-center z-[1]">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="hero-watermark"
+        >
+          AUTOSHINE
+        </motion.span>
+      </div>
+
+      {/* Hero car image */}
+      <div className="absolute inset-0 z-[2] flex items-end justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full max-w-[900px] px-5"
+        >
+          <img
+            src="/images/hero-bg.jpg"
+            alt="Professional car detailing"
+            className="w-full h-auto object-cover rounded-t-3xl shadow-2xl"
+            style={{ maxHeight: "55vh" }}
+          />
+        </motion.div>
+      </div>
+
+      {/* Blue accent block (Moxom-style geometric element) */}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[180px] h-[280px] bg-amber/80 rounded-lg z-[1]"
       />
 
-      <div className="relative z-[2] text-center max-w-[860px] px-5 pt-[120px] pb-20">
+      {/* Content overlay at top */}
+      <div className="relative z-[3] text-center max-w-[860px] px-5 pt-[120px] pb-[340px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 bg-amber/12 border border-border-accent rounded-full px-6 py-2.5 text-amber text-[0.85rem] font-medium mb-7"
+          className="inline-flex items-center gap-2 bg-amber/10 border border-border-accent rounded-full px-6 py-2.5 text-amber text-[0.85rem] font-medium mb-7"
         >
           {(() => {
             const BadgeIcon = getIcon("Award");
@@ -67,60 +91,39 @@ export function Hero({ data }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex gap-4 justify-center flex-wrap mb-12"
+          className="flex gap-4 justify-center flex-wrap"
         >
           <Link
             href="#booking"
-            className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] btn-gradient text-bg-dark border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow max-md:w-full max-md:max-w-[300px]"
+            className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] btn-gradient text-white border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow max-md:w-full max-md:max-w-[300px]"
           >
             <CalendarCheck className="h-5 w-5" />
             {data.ctaText}
           </Link>
           <a
             href={data.phoneHref}
-            className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] bg-transparent text-text-white border-2 border-white/25 transition-all duration-300 hover:border-amber hover:text-amber hover:-translate-y-0.5 max-md:w-full max-md:max-w-[300px]"
+            className="inline-flex items-center justify-center gap-2.5 px-10 py-4 rounded-lg font-semibold text-[1.05rem] bg-white text-text-white border-2 border-border-subtle transition-all duration-300 hover:border-amber hover:text-amber hover:-translate-y-0.5 shadow-sm max-md:w-full max-md:max-w-[300px]"
           >
             <Phone className="h-5 w-5" />
             {data.phone}
           </a>
         </motion.div>
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex items-center justify-center gap-6 flex-wrap max-md:flex-col max-md:gap-3"
-        >
-          {(data.trustItems || []).map((item, index) => {
-            const TrustIcon = getIcon(item.icon);
-            return (
-              <div key={index} className="flex items-center gap-2 text-text-muted text-[0.9rem] font-medium">
-                {item.icon === "Star" ? (
-                  <div className="flex gap-0.5 text-amber">
-                    {Array.from({ length: 5 }).map((_, i) => {
-                      const StarIcon = getIcon("Star");
-                      return <StarIcon key={i} className="h-4 w-4 fill-current" />;
-                    })}
-                  </div>
-                ) : (
-                  <TrustIcon className="h-4 w-4 text-amber" />
-                )}
-                <span>{item.text}</span>
-                {index < (data.trustItems || []).length - 1 && (
-                  <div className="w-px h-6 bg-white/15 ml-4 max-md:hidden" />
-                )}
-              </div>
-            );
-          })}
-        </motion.div>
+      {/* Hours bar at bottom left */}
+      <div className="absolute bottom-8 left-8 z-[4] flex items-center gap-3">
+        <div className="w-10 h-px bg-text-muted/40" />
+        <p className="text-[0.8rem] text-text-muted font-medium">
+          <span className="font-semibold text-text-white">Mon - Sat:</span> 08:00 - 18:00
+        </p>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2]">
+      <div className="absolute bottom-8 right-8 z-[4]">
         <Link
-          href="#services"
-          aria-label="Scroll to services"
-          className="flex items-center justify-center w-11 h-11 border-2 border-white/15 rounded-full text-text-muted"
+          href="#features"
+          aria-label="Scroll to features"
+          className="flex items-center justify-center w-11 h-11 border-2 border-text-muted/20 rounded-full text-text-muted hover:border-amber hover:text-amber transition-colors"
         >
           <motion.div
             animate={{ y: [0, -8, -4, 0] }}

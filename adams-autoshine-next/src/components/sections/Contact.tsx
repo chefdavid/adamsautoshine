@@ -13,7 +13,7 @@ interface ContactProps {
 
 export function Contact({ data }: ContactProps) {
   return (
-    <section id="contact" className="py-25 bg-bg-section">
+    <section id="contact" className="py-25 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={MapPin}

@@ -50,7 +50,7 @@ export function Footer({ contactData, footerData }: FooterProps) {
     "Gloucester County, New Jersey's trusted professional car detailing service. Premium hand wash, ceramic coating, paint correction, and full interior detailing.";
 
   return (
-    <footer className="bg-bg-dark pt-15 border-t border-border-subtle">
+    <footer className="bg-[#0C1222] pt-15 border-t border-white/[0.06] section-dark">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-border-subtle">
           {/* Brand */}

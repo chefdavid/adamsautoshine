@@ -12,7 +12,7 @@ interface GalleryProps {
 
 export function Gallery({ data }: GalleryProps) {
   return (
-    <section id="gallery" className="py-25 bg-bg-dark">
+    <section id="gallery" className="py-25 bg-[#0C1222] section-dark">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={ImageIcon}

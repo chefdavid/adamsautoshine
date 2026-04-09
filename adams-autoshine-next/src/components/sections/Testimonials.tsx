@@ -15,7 +15,7 @@ interface TestimonialsProps {
 
 export function Testimonials({ data, googleUrl }: TestimonialsProps) {
   return (
-    <section id="testimonials" className="py-25 bg-bg-dark">
+    <section id="testimonials" className="py-25 bg-[#0C1222] section-dark">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={Star}

@@ -13,7 +13,7 @@ interface ServicesProps {
 
 export function Services({ data }: ServicesProps) {
   return (
-    <section id="services" className="py-25 bg-bg-section">
+    <section id="services" className="py-25 bg-[#F0F4F8]">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={Sparkles}
@@ -24,13 +24,14 @@ export function Services({ data }: ServicesProps) {
         />
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.map((service) => (
+          {data.map((service, i) => (
             <ServiceCard
               key={service.title}
               icon={getIcon(service.icon)}
               title={service.title}
               description={service.description}
               features={service.features}
+              index={i + 1}
             />
           ))}
         </StaggerContainer>

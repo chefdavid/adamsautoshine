@@ -32,27 +32,27 @@ export function Header({ phone, phoneHref }: HeaderProps) {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-bg-dark/95 backdrop-blur-xl py-2.5 shadow-[0_2px_20px_rgba(0,0,0,0.3)]"
+          ? "bg-white/95 backdrop-blur-xl py-2.5 shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
           : "bg-transparent py-4"
       )}
     >
       <nav className="max-w-[1200px] mx-auto px-5 flex items-center justify-between">
-        <Link href="#" className="flex items-center gap-2.5 text-text-white text-[1.3rem] font-bold z-[1001] hover:text-text-white">
-          <span>
+        <Link href="#" className="flex items-center gap-2.5 text-[#0F172A] text-[1.3rem] font-bold z-[1001] hover:text-[#0F172A] uppercase tracking-wider">
+          <span className="border-t-2 border-[#0F172A] pt-1">
             Adam&apos;s<span className="text-amber">Autoshine</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-2">
+        <ul className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 className={cn(
-                  "text-text-muted text-[0.9rem] font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:text-text-white hover:bg-white/5",
+                  "text-[#64748B] text-[0.85rem] font-semibold uppercase tracking-wider px-4 py-2 rounded-lg transition-all duration-300 hover:text-[#0F172A]",
                   activeSection === link.href.replace("#", "") &&
-                    "text-text-white bg-white/5"
+                    "text-[#0F172A]"
                 )}
               >
                 {link.label}
@@ -63,7 +63,7 @@ export function Header({ phone, phoneHref }: HeaderProps) {
 
         <Link
           href="#booking"
-          className="hidden md:inline-flex items-center justify-center gap-2.5 px-6 py-2.5 rounded-lg font-semibold text-[0.9rem] btn-gradient text-bg-dark border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow"
+          className="hidden md:inline-flex items-center justify-center gap-2.5 px-6 py-2.5 rounded-lg font-semibold text-[0.85rem] uppercase tracking-wider btn-gradient text-white border-2 border-amber transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-glow"
         >
           Book Now
         </Link>
@@ -71,14 +71,14 @@ export function Header({ phone, phoneHref }: HeaderProps) {
         {/* Mobile nav */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="z-[1001] text-text-white hover:bg-white/5">
+            <Button variant="ghost" size="icon" className="z-[1001] text-[#0F172A] hover:bg-black/5">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[80%] max-w-[320px] bg-bg-dark/98 backdrop-blur-xl border-l border-border-subtle pt-24 px-8"
+            className="w-[80%] max-w-[320px] bg-white/98 backdrop-blur-xl border-l border-border-subtle pt-24 px-8"
           >
             <SheetTitle className="sr-only">Navigation menu</SheetTitle>
             <nav className="flex flex-col gap-1">
@@ -88,9 +88,9 @@ export function Header({ phone, phoneHref }: HeaderProps) {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "text-text-muted text-[1.1rem] font-medium px-4 py-3.5 rounded-lg transition-all duration-300 hover:text-text-white hover:bg-white/5",
+                    "text-[#64748B] text-[1.1rem] font-semibold uppercase tracking-wider px-4 py-3.5 rounded-lg transition-all duration-300 hover:text-[#0F172A] hover:bg-black/5",
                     activeSection === link.href.replace("#", "") &&
-                      "text-text-white bg-white/5"
+                      "text-[#0F172A] bg-black/5"
                   )}
                 >
                   {link.label}
@@ -99,7 +99,7 @@ export function Header({ phone, phoneHref }: HeaderProps) {
               <Link
                 href="#booking"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg font-semibold text-base btn-gradient text-bg-dark border-2 border-amber"
+                className="mt-4 inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg font-semibold text-base uppercase btn-gradient text-white border-2 border-amber"
               >
                 Book Now
               </Link>

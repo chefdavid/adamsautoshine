@@ -15,7 +15,7 @@ interface WhyUsProps {
 
 export function WhyUs({ reasons, stats }: WhyUsProps) {
   return (
-    <section id="why-us" className="py-25 bg-bg-dark">
+    <section id="why-us" className="py-25 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <SectionHeader
           icon={Trophy}

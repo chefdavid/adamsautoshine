@@ -22,10 +22,10 @@ export function PricingCard({
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={cn(
-        "relative flex flex-col bg-bg-card border rounded-3xl p-10 max-sm:p-8 transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)]",
+        "relative flex flex-col bg-white border rounded-3xl p-10 max-sm:p-8 transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]",
         featured
-          ? "border-amber bg-gradient-to-b from-amber/8 to-bg-card lg:scale-[1.03] shadow-amber-glow"
-          : "border-border-subtle"
+          ? "border-amber bg-gradient-to-b from-amber/5 to-white lg:scale-[1.03] shadow-amber-glow"
+          : "border-black/[0.06]"
       )}
     >
       {badge && (
@@ -81,8 +81,8 @@ export function PricingCard({
         className={cn(
           "w-full inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-lg font-semibold text-[0.95rem] transition-all duration-300 border-2 hover:-translate-y-0.5",
           featured
-            ? "btn-gradient text-bg-dark border-amber hover:shadow-amber-glow"
-            : "bg-transparent text-text-white border-white/25 hover:border-amber hover:text-amber"
+            ? "btn-gradient text-white border-amber hover:shadow-amber-glow"
+            : "bg-transparent text-[#0F172A] border-black/15 hover:border-amber hover:text-amber"
         )}
       >
         Get Started

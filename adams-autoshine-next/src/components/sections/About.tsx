@@ -11,11 +11,11 @@ interface AboutProps {
 
 export function About({ data }: AboutProps) {
   return (
-    <section id="about" className="py-25 bg-bg-dark">
+    <section id="about" className="py-25 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
           <ScrollReveal>
-            <div className="w-full aspect-[4/3] flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-bg-card to-bg-card-hover border border-border-subtle rounded-3xl">
+            <div className="w-full aspect-[4/3] flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-[#F0F4F8] to-[#E2E8F0] border border-black/[0.06] rounded-3xl">
               <SprayCan className="h-16 w-16 text-amber opacity-30" />
               <span className="text-text-muted font-medium">
                 Adam&apos;s Autoshine

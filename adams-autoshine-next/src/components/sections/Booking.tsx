@@ -69,7 +69,7 @@ export function Booking({ perks, serviceOptions, timeOptions }: BookingProps) {
   };
 
   return (
-    <section id="booking" className="py-25 bg-bg-section">
+    <section id="booking" className="py-25 bg-[#0C1222] section-dark">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 items-start">
           {/* Info sidebar */}
