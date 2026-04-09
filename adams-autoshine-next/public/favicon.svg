@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0A0A1A"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark rounded background -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+  <!-- Water droplet -->
+  <path d="M256 82c0 0-130 152-130 252c0 71.8 58.2 130 130 130s130-58.2 130-130C386 234 256 82 256 82z" fill="url(#dropGrad)"/>
+  <!-- Inner highlight reflection -->
+  <ellipse cx="215" cy="280" rx="35" ry="60" fill="#FFFFFF" opacity="0.2" transform="rotate(-15, 215, 280)"/>
+  <!-- Small top highlight -->
+  <ellipse cx="230" cy="220" rx="12" ry="18" fill="#FFFFFF" opacity="0.25" transform="rotate(-10, 230, 220)"/>
+  <!-- Shine sparkle - main star -->
+  <g transform="translate(330, 165)">
+    <path d="M0-32 L7-7 L32 0 L7 7 L0 32 L-7 7 L-32 0 L-7-7 Z" fill="#F59E0B"/>
+  </g>
+  <!-- Small sparkle -->
+  <g transform="translate(365, 120) scale(0.45)">
+    <path d="M0-32 L7-7 L32 0 L7 7 L0 32 L-7 7 L-32 0 L-7-7 Z" fill="#FBBF24" opacity="0.8"/>
+  </g>
+  <!-- Tiny sparkle -->
+  <g transform="translate(295, 130) scale(0.28)">
+    <path d="M0-32 L7-7 L32 0 L7 7 L0 32 L-7 7 L-32 0 L-7-7 Z" fill="#FCD34D" opacity="0.6"/>
+  </g>
+</svg>

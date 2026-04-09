@@ -36,7 +36,11 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [seo.ogImage],
     },
     icons: {
-      icon: "/images/logo.png",
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/images/logo.png", type: "image/png" },
+      ],
+      apple: "/favicon.svg",
     },
     other: {
       "geo.region": "US-NJ",
