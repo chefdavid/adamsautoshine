@@ -22,7 +22,7 @@ export function Testimonials({ data, googleUrl }: TestimonialsProps) {
           tag="Customer Reviews"
           title="What Our Customers"
           titleAccent="Say"
-          subtitle="Don't just take our word for it. Here's what Enid car owners say about our detailing services."
+          subtitle="Don't just take our word for it. Here's what Gloucester County car owners say about our detailing services."
         />
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

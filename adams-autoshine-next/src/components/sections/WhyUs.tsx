@@ -20,7 +20,7 @@ export function WhyUs({ reasons, stats }: WhyUsProps) {
         <SectionHeader
           icon={Trophy}
           tag="Why Adam's Autoshine"
-          title="Why Enid Trusts"
+          title="Why Gloucester County Trusts"
           titleAccent="Adam's Autoshine"
           subtitle="We're not just another car wash. We're passionate detailing professionals committed to excellence on every vehicle we touch."
         />

@@ -47,7 +47,7 @@ export function Footer({ contactData, footerData }: FooterProps) {
   const contact = contactData || CONTACT_INFO;
   const seoText = footerData?.seoText || FOOTER_SEO_TEXT;
   const brandTagline = footerData?.brandTagline ||
-    "Enid, Oklahoma's trusted professional car detailing service. Premium hand wash, ceramic coating, paint correction, and full interior detailing.";
+    "Gloucester County, New Jersey's trusted professional car detailing service. Premium hand wash, ceramic coating, paint correction, and full interior detailing.";
 
   return (
     <footer className="bg-bg-dark pt-15 border-t border-border-subtle">
@@ -156,7 +156,7 @@ export function Footer({ contactData, footerData }: FooterProps) {
         <div className="py-5 text-center">
           <p className="text-[0.85rem] text-text-muted">
             &copy; {new Date().getFullYear()} Adam&apos;s Autoshine. All Rights
-            Reserved. | Enid, Oklahoma
+            Reserved. | Gloucester County, NJ
           </p>
         </div>
       </div>

@@ -19,7 +19,7 @@ export function Contact({ data }: ContactProps) {
           icon={MapPin}
           tag="Get In Touch"
           title="Visit Us in"
-          titleAccent="Enid, Oklahoma"
+          titleAccent="Gloucester County, NJ"
           subtitle="Stop by our shop or reach out anytime. We're always happy to answer questions and provide free estimates."
         />
 

@@ -62,7 +62,7 @@ export const SERVICES: Service[] = [
     icon: Shield,
     title: "Ceramic Coating",
     description:
-      "Long-lasting paint protection with professional-grade ceramic coating. Shield your car from Oklahoma's sun, rain, and road debris.",
+      "Long-lasting paint protection with professional-grade ceramic coating. Shield your car from New Jersey's sun, salt, rain, and road debris.",
     features: [
       "2-5 Year Protection",
       "UV & Chemical Resistant",
@@ -213,7 +213,7 @@ export const BOOKING_PERKS: Perk[] = [
   {
     icon: Truck,
     title: "Mobile Service Available",
-    description: "We come to you in Enid",
+    description: "We come to you anywhere in Gloucester County",
   },
   {
     icon: CreditCard,
@@ -224,50 +224,50 @@ export const BOOKING_PERKS: Perk[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    text: "Hands down the best car detailing in Enid. My truck looked better than when I bought it. The interior deep clean was absolutely amazing. Will definitely be a repeat customer!",
+    text: "Hands down the best car detailing in the area. My truck looked better than when I bought it. The interior deep clean was absolutely amazing. Will definitely be a repeat customer!",
     initials: "JM",
     name: "Jake M.",
-    location: "Enid, OK \u2022 Ultimate Package",
+    location: "Washington Twp, NJ \u2022 Ultimate Package",
   },
   {
-    text: "I've tried every car wash in Enid and nothing compares to Adam's Autoshine. The ceramic coating they applied has kept my car looking new for months even through Oklahoma weather.",
+    text: "I've tried every car wash around and nothing compares to Adam's Autoshine. The ceramic coating they applied has kept my car looking new for months even through Jersey weather.",
     initials: "SR",
     name: "Sarah R.",
-    location: "North Enid, OK \u2022 Ceramic Coating",
+    location: "Mullica Hill, NJ \u2022 Ceramic Coating",
   },
   {
     text: "Professional, on time, and the results speak for themselves. They came to my office and detailed my car while I worked. Can't beat that convenience. Five stars all day!",
     initials: "DW",
     name: "Derek W.",
-    location: "Enid, OK \u2022 Mobile Detailing",
+    location: "Turnersville, NJ \u2022 Mobile Detailing",
   },
 ];
 
 export const FAQS: FAQ[] = [
   {
-    question: "How long does a full car detail take in Enid, OK?",
+    question: "How long does a full car detail take in Gloucester County, NJ?",
     answer:
       "A full car detail at Adam's Autoshine typically takes 2-4 hours depending on the vehicle size and package selected. Our Basic Shine takes about 1 hour, Premium Detail takes 2-3 hours, and our Ultimate Package takes 3-4 hours. We never rush the job - quality takes time.",
   },
   {
-    question: "Do you offer mobile car detailing in Enid, Oklahoma?",
+    question: "Do you offer mobile car detailing in Gloucester County and South Jersey?",
     answer:
-      "Yes! Adam's Autoshine offers mobile detailing services throughout Enid and surrounding areas in Garfield County, including North Enid, Waukomis, and Drummond. We bring our professional equipment directly to your home or office - all we need is access to a water source and a shaded area when possible.",
+      "Yes! Adam's Autoshine offers mobile detailing services throughout Gloucester County and surrounding South Jersey communities including Washington Township, Mullica Hill, Turnersville, Sewell, Deptford, Glassboro, and Williamstown. We bring our professional equipment directly to your home or office - all we need is access to a water source and a shaded area when possible.",
   },
   {
     question: "What is ceramic coating and is it worth it?",
     answer:
-      "Ceramic coating is a liquid polymer applied to your vehicle's exterior that creates a permanent or semi-permanent bond with the paint. It provides superior protection against UV rays, chemical stains, and minor scratches. In Oklahoma's harsh weather - from intense summer sun to winter ice storms - ceramic coating is one of the best investments you can make to protect your vehicle's finish. The hydrophobic properties also make washing your car much easier.",
+      "Ceramic coating is a liquid polymer applied to your vehicle's exterior that creates a permanent or semi-permanent bond with the paint. It provides superior protection against UV rays, chemical stains, and minor scratches. In New Jersey's weather - from summer heat and humidity to winter road salt and ice - ceramic coating is one of the best investments you can make to protect your vehicle's finish. The hydrophobic properties also make washing your car much easier.",
   },
   {
     question: "How often should I get my car detailed?",
     answer:
-      "We recommend a full detail every 4-6 months and a basic exterior wash every 2-4 weeks. Regular detailing protects your paint, maintains your vehicle's resale value, and keeps it looking showroom-new. If you park outdoors or drive on dirt roads frequently (common in rural Oklahoma), you may want to detail more often.",
+      "We recommend a full detail every 4-6 months and a basic exterior wash every 2-4 weeks. Regular detailing protects your paint, maintains your vehicle's resale value, and keeps it looking showroom-new. If you park outdoors or deal with road salt in winter (common in South Jersey), you may want to detail more often.",
   },
   {
-    question: "What areas do you serve besides Enid?",
+    question: "What areas do you serve in South Jersey?",
     answer:
-      "Adam's Autoshine proudly serves Enid and surrounding communities including North Enid, Waukomis, Drummond, Kremlin, Lahoma, Carrier, Covington, and other areas within Garfield County, Oklahoma. For mobile detailing outside our standard service area, please contact us and we'll do our best to accommodate you.",
+      "Adam's Autoshine proudly serves all of Gloucester County and surrounding South Jersey communities. Our primary service area includes Washington Township, Mullica Hill, Turnersville, Sewell, Deptford, Glassboro, Williamstown, Monroe Township, and Woolwich Township. We also serve Mantua, Pitman, Swedesboro, West Deptford, Harrison Township, Woodbury, Wenonah, Franklinville, Clayton, Mickleton, and the greater Delaware Valley region. Contact us for mobile detailing anywhere in South Jersey!",
   },
   {
     question: "What payment methods do you accept?",
@@ -301,10 +301,10 @@ export const TIME_OPTIONS: TimeOption[] = [
 ];
 
 export const CONTACT_INFO = {
-  address: "1727 N Grand Ave",
-  city: "Enid, OK 73701",
-  phone: "(580) 555-0123",
-  phoneHref: "tel:+15805550123",
+  address: "Mobile Detailing — We Come to You",
+  city: "Mullica Hill, NJ 08062",
+  phone: "(856) 305-0623",
+  phoneHref: "tel:+18563050623",
   email: "info@adamsautoshine.com",
   emailHref: "mailto:info@adamsautoshine.com",
   hours: {
@@ -313,14 +313,14 @@ export const CONTACT_INFO = {
     sunday: "Sunday: Closed",
   },
   mapEmbedUrl:
-    "https://maps.google.com/maps?q=1727+N+Grand+Ave,+Enid,+OK+73701&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    "https://maps.google.com/maps?q=Mullica+Hill,+NJ+08062&t=&z=12&ie=UTF8&iwloc=&output=embed",
   social: {
     facebook: "https://www.facebook.com/adamsautoshine",
     instagram: "https://www.instagram.com/adamsautoshine",
     tiktok: "https://www.tiktok.com/@adamsautoshine",
-    google: "https://www.google.com/maps/place/Enid+OK",
+    google: "https://www.google.com/maps/place/Gloucester+County+NJ",
   },
 };
 
 export const FOOTER_SEO_TEXT =
-  "Adam's Autoshine provides professional car detailing services in Enid, Oklahoma and surrounding areas including North Enid, Waukomis, Drummond, Kremlin, and Garfield County. Our services include exterior car wash, interior detailing, ceramic coating, paint correction, engine bay cleaning, and headlight restoration. We are Enid's top-rated auto detailing provider.";
+  "Adam's Autoshine provides professional car detailing services in Gloucester County, New Jersey and surrounding South Jersey communities including Washington Township, Mullica Hill, Turnersville, Sewell, Deptford, Glassboro, Williamstown, Monroe Township, Woolwich Township, Mantua, Pitman, Swedesboro, West Deptford, Harrison Township, Woodbury, Woodbury Heights, Wenonah, Franklinville, Clayton, and Mickleton. Our services include exterior car wash, hand wash detailing, interior detailing, ceramic coating, paint correction, engine bay cleaning, and headlight restoration. We offer both mobile detailing and shop services throughout Gloucester County and the greater South Jersey and Delaware Valley region. We are Gloucester County's top-rated auto detailing provider.";

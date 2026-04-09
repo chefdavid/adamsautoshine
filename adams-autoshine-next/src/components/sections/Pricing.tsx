@@ -31,15 +31,30 @@ export function Pricing({ data }: PricingProps) {
         </StaggerContainer>
 
         <ScrollReveal>
-          <p className="text-center mt-10 text-[0.9rem] text-text-muted">
-            <Info className="inline h-4 w-4 text-amber mr-1.5 -mt-0.5" />
-            Prices shown are for sedans. SUVs, trucks, and larger vehicles may
-            vary.{" "}
-            <Link href="#contact" className="text-amber hover:text-amber-light">
-              Contact us
-            </Link>{" "}
-            for a custom quote.
-          </p>
+          <div className="mt-10 max-w-[680px] mx-auto">
+            <div className="grid grid-cols-3 gap-3 text-center mb-4">
+              <div className="bg-bg-card border border-border-subtle rounded-xl px-4 py-3">
+                <p className="text-[0.8rem] text-text-muted mb-0.5">Sedan / Coupe</p>
+                <p className="text-[0.9rem] font-semibold text-text-white">Base price</p>
+              </div>
+              <div className="bg-bg-card border border-border-subtle rounded-xl px-4 py-3">
+                <p className="text-[0.8rem] text-text-muted mb-0.5">SUV / Crossover / Truck</p>
+                <p className="text-[0.9rem] font-semibold text-text-white">+$30–$50</p>
+              </div>
+              <div className="bg-bg-card border border-border-subtle rounded-xl px-4 py-3">
+                <p className="text-[0.8rem] text-text-muted mb-0.5">XL (Full-size / Van / 3-row)</p>
+                <p className="text-[0.9rem] font-semibold text-text-white">+$50–$80</p>
+              </div>
+            </div>
+            <p className="text-center text-[0.85rem] text-text-muted">
+              <Info className="inline h-4 w-4 text-amber mr-1.5 -mt-0.5" />
+              Heavy pet hair, excessive dirt, or smoke odor may require an additional $25–$75 surcharge — we&apos;ll confirm before starting.{" "}
+              <Link href="#contact" className="text-amber hover:text-amber-light">
+                Contact us
+              </Link>{" "}
+              for a custom quote.
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>

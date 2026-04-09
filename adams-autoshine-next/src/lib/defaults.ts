@@ -27,14 +27,14 @@ function getIconName(icon: { displayName?: string; name?: string }): string {
 }
 
 const HERO_DEFAULTS: HeroData = {
-  badge: "Enid's #1 Rated Auto Detailing",
-  heading: "Professional Car Detailing Services in",
-  headingAccent: "Enid, Oklahoma",
+  badge: "Gloucester County's #1 Rated Auto Detailing",
+  heading: "Professional Auto Detailing —",
+  headingAccent: "Gloucester County, NJ",
   subtitle:
-    "Transform your vehicle with expert hand wash, ceramic coating, paint correction, and full interior detailing. Trusted by hundreds of car owners across Enid and Garfield County.",
+    "Honest work. Real results. Professional detailing serving Washington Township, Mullica Hill, Turnersville & all of Gloucester County.",
   ctaText: "Book Appointment",
-  phone: "(580) 555-0123",
-  phoneHref: "tel:+15805550123",
+  phone: "(856) 305-0623",
+  phoneHref: "tel:+18563050623",
   trustItems: [
     { icon: "Star", text: "4.9/5 Rating" },
     { icon: "Shield", text: "Fully Insured" },
@@ -46,9 +46,9 @@ const ABOUT_DEFAULTS: AboutData = {
   heading: "About",
   headingAccent: "Adam's Autoshine",
   paragraph1:
-    "At Adam's Autoshine, we believe every vehicle deserves to look its absolute best. Founded right here in Enid, Oklahoma, we've built our reputation on meticulous attention to detail, honest pricing, and treating every car like it's our own.",
+    "At Adam's Autoshine, we believe every vehicle deserves to look its absolute best. Now proudly serving Gloucester County, New Jersey, we've built our reputation on meticulous attention to detail, honest pricing, and treating every car like it's our own.",
   paragraph2:
-    "What started as a passion for cars has grown into Enid's most trusted auto detailing service. We combine professional-grade products with years of hands-on experience to deliver results that exceed expectations every single time.",
+    "We combine professional-grade products with years of hands-on experience to deliver results that exceed expectations every single time.",
   valueBadges: [
     { icon: "HandMetal", text: "Hand Wash Only" },
     { icon: "Leaf", text: "Eco-Friendly Products" },
@@ -59,28 +59,28 @@ const ABOUT_DEFAULTS: AboutData = {
 const CTA_DEFAULTS: CTABannerData = {
   heading: "Ready to Make Your Car Shine?",
   subtitle:
-    "Book your professional car detailing appointment in Enid today. Same-week availability.",
+    "Book your professional car detailing appointment in Gloucester County today. Same-week availability.",
   ctaText: "Book Now",
   secondaryCtaText: "Call Us",
 };
 
 const SEO_DEFAULTS: SEOData = {
   title:
-    "Adam's Autoshine | Professional Car Detailing & Auto Wash in Enid, OK",
+    "Adam's Autoshine | Professional Car Detailing in Gloucester County, NJ",
   description:
-    "Adam's Autoshine is Enid, Oklahoma's premier car detailing service. Professional exterior & interior detailing, ceramic coating, paint correction, and hand car wash. Book online today!",
+    "Professional car detailing in Gloucester County, NJ. Serving Washington Township, Mullica Hill, Turnersville, Sewell, Deptford & all of South Jersey. Ceramic coating, interior detailing, paint correction. Book today.",
   keywords:
-    "car detailing enid ok, auto detailing enid oklahoma, car wash enid, ceramic coating enid, paint correction enid ok, mobile detailing enid, interior car cleaning enid, hand car wash enid, vehicle detailing enid oklahoma, best car detailing enid, professional auto wash enid ok, car wax enid, auto cleaning services enid",
-  ogTitle: "Adam's Autoshine | Professional Car Detailing in Enid, OK",
+    "car detailing gloucester county nj, auto detailing south jersey, car wash washington township nj, ceramic coating mullica hill nj, paint correction turnersville nj, mobile detailing gloucester county, interior car cleaning sewell nj, hand car wash deptford nj, vehicle detailing glassboro nj, best car detailing south jersey, professional auto wash gloucester county nj, car detailing near me nj",
+  ogTitle: "Adam's Autoshine | Professional Car Detailing in Gloucester County, NJ",
   ogDescription:
-    "Enid, Oklahoma's premier car detailing service. Professional detailing, ceramic coating, paint correction & more. Book your appointment today!",
+    "Professional car detailing in Gloucester County, NJ. Serving Washington Township, Mullica Hill, Turnersville & all of South Jersey. Book your appointment today!",
   ogImage: "https://www.adamsautoshine.com/images/og-image.jpg",
 };
 
 const FOOTER_DEFAULTS: FooterData = {
   seoText: FOOTER_SEO_TEXT,
   brandTagline:
-    "Enid, Oklahoma's trusted professional car detailing service. Premium hand wash, ceramic coating, paint correction, and full interior detailing.",
+    "Gloucester County, New Jersey's trusted professional car detailing service. Premium hand wash, ceramic coating, paint correction, and full interior detailing.",
 };
 
 export function getDefaults<K extends SectionKey>(section: K): SectionDataMap[K] {

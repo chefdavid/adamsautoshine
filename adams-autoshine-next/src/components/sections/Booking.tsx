@@ -149,7 +149,7 @@ export function Booking({ perks, serviceOptions, timeOptions }: BookingProps) {
                       <input
                         {...register("phone")}
                         type="tel"
-                        placeholder="(580) 555-0123"
+                        placeholder="(856) 555-0123"
                         onChange={(e) => {
                           const formatted = formatPhone(e.target.value);
                           setValue("phone", formatted, {

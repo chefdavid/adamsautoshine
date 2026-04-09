@@ -24,7 +24,7 @@ export function FAQ({ data }: FAQProps) {
           tag="Common Questions"
           title="Frequently Asked"
           titleAccent="Questions"
-          subtitle="Got questions about car detailing in Enid? We've got answers."
+          subtitle="Got questions about car detailing in Gloucester County? We've got answers."
         />
 
         <ScrollReveal>

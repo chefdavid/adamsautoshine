@@ -5,7 +5,7 @@ interface GoogleMapProps {
 
 export function GoogleMap({
   src,
-  title = "Adam's Autoshine location in Enid, Oklahoma",
+  title = "Adam's Autoshine — Gloucester County, New Jersey",
 }: GoogleMapProps) {
   return (
     <div className="rounded-3xl overflow-hidden border border-border-subtle">

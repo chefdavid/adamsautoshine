@@ -42,6 +42,9 @@ export function PricingCard({
       </div>
 
       <div className="text-center mb-8 pb-8 border-b border-border-subtle">
+        <p className="text-[0.75rem] font-semibold text-amber uppercase tracking-wider mb-1">
+          Starting at
+        </p>
         <span className="text-2xl font-bold text-amber align-super">$</span>
         <span className="text-[3.5rem] font-extrabold text-text-white leading-none">
           {price}
@@ -49,6 +52,7 @@ export function PricingCard({
         <span className="text-2xl font-bold text-text-muted align-super">
           {decimal}
         </span>
+        <p className="text-[0.75rem] text-text-muted mt-1">Sedans & Coupes</p>
       </div>
 
       <ul className="flex-1 flex flex-col gap-3 mb-8">

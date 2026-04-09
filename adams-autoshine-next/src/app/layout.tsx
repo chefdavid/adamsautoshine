@@ -39,10 +39,10 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: "/images/logo.png",
     },
     other: {
-      "geo.region": "US-OK",
-      "geo.placename": "Enid",
-      "geo.position": "36.3956;-97.8783",
-      ICBM: "36.3956, -97.8783",
+      "geo.region": "US-NJ",
+      "geo.placename": "Gloucester County",
+      "geo.position": "39.7173;-75.1363",
+      ICBM: "39.7173, -75.1363",
     },
   };
 }
@@ -67,22 +67,22 @@ export default async function RootLayout({
               "@type": "AutoRepair",
               name: "Adam's Autoshine",
               description:
-                "Professional car detailing, ceramic coating, paint correction, and auto wash services in Enid, Oklahoma.",
+                "Professional car detailing, ceramic coating, paint correction, and auto wash services in Gloucester County, New Jersey.",
               url: "https://www.adamsautoshine.com",
               telephone: contact.phone,
               email: contact.email,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: contact.address,
-                addressLocality: "Enid",
-                addressRegion: "OK",
-                postalCode: "73701",
+                addressLocality: "Mullica Hill",
+                addressRegion: "NJ",
+                postalCode: "08062",
                 addressCountry: "US",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 36.3956,
-                longitude: -97.8783,
+                latitude: 39.7390,
+                longitude: -75.2241,
               },
               openingHoursSpecification: [
                 {
@@ -111,14 +111,18 @@ export default async function RootLayout({
                 contact.social?.instagram,
                 contact.social?.google,
               ].filter(Boolean),
-              areaServed: {
-                "@type": "City",
-                name: "Enid",
-                containedInPlace: {
-                  "@type": "State",
-                  name: "Oklahoma",
-                },
-              },
+              areaServed: [
+                { "@type": "County", name: "Gloucester County", containedInPlace: { "@type": "State", name: "New Jersey" } },
+                { "@type": "City", name: "Washington Township" },
+                { "@type": "City", name: "Mullica Hill" },
+                { "@type": "City", name: "Turnersville" },
+                { "@type": "City", name: "Sewell" },
+                { "@type": "City", name: "Deptford" },
+                { "@type": "City", name: "Glassboro" },
+                { "@type": "City", name: "Williamstown" },
+                { "@type": "City", name: "Monroe Township" },
+                { "@type": "City", name: "Woolwich Township" },
+              ],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.9",

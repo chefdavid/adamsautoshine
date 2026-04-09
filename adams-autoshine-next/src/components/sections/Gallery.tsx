@@ -19,7 +19,7 @@ export function Gallery({ data }: GalleryProps) {
           tag="See The Results"
           title="Our Recent"
           titleAccent="Work"
-          subtitle="Real results on real vehicles. See why Enid car owners trust Adam's Autoshine for their detailing needs."
+          subtitle="Real results on real vehicles. See why Gloucester County car owners trust Adam's Autoshine for their detailing needs."
         />
 
         <ScrollReveal>
