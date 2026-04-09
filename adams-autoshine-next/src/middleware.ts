@@ -11,8 +11,7 @@ export async function middleware(request: NextRequest) {
 
   if (
     pathname.startsWith("/admin/dashboard") ||
-    pathname.startsWith("/api/admin/content") ||
-    pathname.startsWith("/api/admin/seed")
+    (pathname.startsWith("/api/admin/") && !pathname.startsWith("/api/admin/login"))
   ) {
     const token = request.cookies.get("admin-token")?.value;
 

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { bookingFormSchema } from "@/lib/validations";
+import { supabaseAdmin } from "@/lib/supabase/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -8,6 +9,23 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const data = bookingFormSchema.parse(body);
+
+    // Save submission to database (non-blocking — don't fail the request if this errors)
+    supabaseAdmin
+      .from("form_submissions")
+      .insert({
+        full_name: data.fullName,
+        phone: data.phone,
+        email: data.email,
+        service: data.service,
+        vehicle: data.vehicle || null,
+        date: data.date,
+        time: data.time || null,
+        notes: data.notes || null,
+      })
+      .then(({ error: dbError }) => {
+        if (dbError) console.error("Failed to save submission:", dbError);
+      });
 
     const { error } = await resend.emails.send({
       from: "Adam's Autoshine <bookings@adamsautoshine.com>",

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -10,6 +11,7 @@ import {
   Tag,
   ImageIcon,
   CalendarCheck,
+  Inbox,
   Users,
   CircleHelp,
   MapPin,
@@ -20,6 +22,7 @@ import {
   Settings,
   LayoutDashboard,
   X,
+  ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -44,6 +47,7 @@ const navGroups = [
     label: "Booking",
     icon: CalendarCheck,
     items: [
+      { href: "/admin/dashboard/submissions", label: "Submissions", icon: Inbox },
       { href: "/admin/dashboard/booking-perks", label: "Booking Perks", icon: CalendarCheck },
       { href: "/admin/dashboard/service-options", label: "Service Options", icon: Clock },
     ],
@@ -66,6 +70,18 @@ interface AdminSidebarProps {
 
 export function AdminSidebar({ open, onClose }: AdminSidebarProps) {
   const pathname = usePathname();
+
+  // Auto-expand groups that contain the active page
+  const initialOpen = navGroups.reduce<Record<string, boolean>>((acc, group) => {
+    acc[group.label] = group.items.some((item) => pathname === item.href);
+    return acc;
+  }, {});
+
+  const [openGroups, setOpenGroups] = useState<Record<string, boolean>>(initialOpen);
+
+  const toggleGroup = (label: string) => {
+    setOpenGroups((prev) => ({ ...prev, [label]: !prev[label] }));
+  };
 
   return (
     <>
@@ -100,7 +116,7 @@ export function AdminSidebar({ open, onClose }: AdminSidebarProps) {
           <Link
             href="/admin/dashboard"
             className={cn(
-              "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium mb-4 transition-colors",
+              "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium mb-2 transition-colors",
               pathname === "/admin/dashboard"
                 ? "bg-amber-50 text-amber-700"
                 : "text-slate-600 hover:bg-slate-100"
@@ -110,32 +126,58 @@ export function AdminSidebar({ open, onClose }: AdminSidebarProps) {
             Dashboard
           </Link>
 
-          {navGroups.map((group) => (
-            <div key={group.label} className="mb-4">
-              <div className="flex items-center gap-2 px-3 mb-1.5">
-                <group.icon className="h-3.5 w-3.5 text-slate-400" />
-                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                  {group.label}
-                </span>
-              </div>
-              {group.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={onClose}
+          {navGroups.map((group) => {
+            const isOpen = openGroups[group.label] ?? false;
+            const hasActive = group.items.some((item) => pathname === item.href);
+
+            return (
+              <div key={group.label} className="mb-1">
+                <button
+                  onClick={() => toggleGroup(group.label)}
                   className={cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
-                    pathname === item.href
-                      ? "bg-amber-50 text-amber-700 font-medium"
+                    "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
+                    hasActive
+                      ? "text-amber-700 font-medium"
                       : "text-slate-600 hover:bg-slate-100"
                   )}
                 >
-                  <item.icon className="h-4 w-4" />
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          ))}
+                  <group.icon className="h-4 w-4 shrink-0" />
+                  <span className="flex-1 text-left">{group.label}</span>
+                  <ChevronRight
+                    className={cn(
+                      "h-3.5 w-3.5 text-slate-400 transition-transform duration-200",
+                      isOpen && "rotate-90"
+                    )}
+                  />
+                </button>
+                <div
+                  className={cn(
+                    "overflow-hidden transition-all duration-200",
+                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  )}
+                >
+                  <div className="ml-3 pl-3 border-l border-slate-200 mt-0.5 mb-1">
+                    {group.items.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={onClose}
+                        className={cn(
+                          "flex items-center gap-3 px-3 py-1.5 rounded-lg text-sm transition-colors",
+                          pathname === item.href
+                            ? "bg-amber-50 text-amber-700 font-medium"
+                            : "text-slate-500 hover:bg-slate-100 hover:text-slate-700"
+                        )}
+                      >
+                        <item.icon className="h-3.5 w-3.5" />
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </nav>
       </aside>
     </>
